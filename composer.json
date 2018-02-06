@@ -1,0 +1,16 @@
+{
+    "name": "tareq1988/facebook-account-kit",
+    "description": "Facebook Account Kit integration for WordPress",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Tareq Hasan",
+            "email": "tareq@wedevs.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "composer/installers": "v1.0.6"
+    }
+}

@@ -1,0 +1,71 @@
+@keyframes spin {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.fb-ackit-wrap .fb-ackit-or {
+    margin-bottom: 16px;
+    position: relative;
+    text-align: center;
+}
+.fb-ackit-wrap .fb-ackit-or:before {
+    background: #E5E5E5;
+    content: '';
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+}
+
+.fb-ackit-wrap .fb-ackit-or span {
+    background: #fff;
+    color: #777;
+    position: relative;
+    padding: 0 8px;
+    text-transform: uppercase;
+}
+
+.fb-ackit-buttons {
+    padding-top: 15px;
+}
+
+.fb-ackit-buttons button {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.fb-ackit-wrap.loading {
+    opacity: .6;
+    pointer-events: none;
+    position: relative
+}
+
+.fb-ackit-wrap.loading::before {
+    height: 1em;
+    width: 1em;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -.5em;
+    margin-top: -.5em;
+    content: '';
+    animation: spin 1s ease-in-out infinite;
+    background: url(../images/loader.svg) center center;
+    background-size: cover;
+    line-height: 1;
+    text-align: center;
+    font-size: 2em;
+    color: rgba(0,0,0,.75);
+    z-index: 9;
+}
+
+.woocommerce-form-login .fb-ackit-wrap {
+    text-align: center;
+}
+
+.woocommerce-form-login .fb-ackit-wrap button {
+    display: inline-block;
+}
