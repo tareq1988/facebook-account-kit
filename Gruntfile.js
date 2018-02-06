@@ -80,6 +80,7 @@ module.exports = function(grunt) {
                     '!Gruntfile.js',
                     '!secret.json',
                     '!package.json',
+                    '!composer.json',
                     '!debug.log',
                     '!phpunit.xml',
                     '!.gitignore',
