@@ -50,8 +50,16 @@ Facebook account and the account kit authentication is fully separated and there
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif).
-2. This is the second screen shot
+1. The default WordPress login screen is overridden by Account Kit.
+2. Switch to Account Kit login.
+3. Login with SMS feature.
+4. Verifying the phone number with OTP.
+5. Login/Register widget.
+6. The settings panel.
+7. The widget settings.
+8. WooCommerce support on the My Account login page.
+9. WooCommerce support on the checkout page.
+10. A user registered with phone number.
 
 == Changelog ==
 
