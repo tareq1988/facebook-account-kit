@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Facebook Account Kit
-Plugin URI: https://tareq.co/
+Plugin URI: https://github.com/tareq1988/facebook-account-kit
 Description: Facebook Account Kit integration for WordPress
 Version: 1.0
 Author: Tareq Hasan
