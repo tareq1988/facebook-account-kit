@@ -2,9 +2,9 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Facebook Account Kit 1.0\n"
+"Project-Id-Version: Facebook Account Kit 1.1\n"
 "Report-Msgid-Bugs-To: https://example.com\n"
-"POT-Creation-Date: 2018-02-06 10:20:36+00:00\n"
+"POT-Creation-Date: 2018-09-10 17:02:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,50 +42,72 @@ msgid ""
 msgstr ""
 
 #: includes/class-admin.php:70
-msgid "Login Options"
+msgid "Redirect URL"
 msgstr ""
 
 #: includes/class-admin.php:71
+msgid ""
+"Insert as redirect URL inside <strong>Web Login Settings</strong> in the "
+"Facebook app settings."
+msgstr ""
+
+#: includes/class-admin.php:76
+msgid "Login Options"
+msgstr ""
+
+#: includes/class-admin.php:77
 msgid "Which methods the users should be able to login/register."
 msgstr ""
 
-#: includes/class-admin.php:75
+#: includes/class-admin.php:81
 msgid "Login with Phone"
 msgstr ""
 
-#: includes/class-admin.php:76 includes/class-admin.php:95
+#: includes/class-admin.php:82 includes/class-admin.php:101
 #: includes/functions.php:67
 msgid "Login with Email"
 msgstr ""
 
-#: includes/class-admin.php:81
+#: includes/class-admin.php:87
 msgid "Description"
 msgstr ""
 
-#: includes/class-admin.php:83 includes/functions.php:76
+#: includes/class-admin.php:89 includes/functions.php:76
 msgid ""
 "Save time by logging-in with your Phone number or Email address, no "
 "password is needed."
 msgstr ""
 
-#: includes/class-admin.php:87
+#: includes/class-admin.php:93
 msgid "Phone Label"
 msgstr ""
 
-#: includes/class-admin.php:89 includes/functions.php:58
+#: includes/class-admin.php:95 includes/functions.php:58
 msgid "Login with SMS"
 msgstr ""
 
-#: includes/class-admin.php:94
+#: includes/class-admin.php:100
 msgid "Email Label"
 msgstr ""
 
-#: includes/class-admin.php:123
+#: includes/class-admin.php:129
 msgid "Settings"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
 msgid "Facebook Account Kit"
+msgstr ""
+
+#: includes/class-profile.php:67
+msgid "Associate Phone Number"
+msgstr ""
+
+#: includes/class-profile.php:71
+msgid "Connected"
+msgstr ""
+
+#: includes/class-profile.php:72
+msgid "Disconnect"
 msgstr ""
 
 #: includes/class-widget.php:13
@@ -116,8 +138,8 @@ msgstr ""
 msgid "Login with SMS or Email"
 msgstr ""
 
-#. Author URI of the plugin/theme
-msgid "https://tareq.co/"
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/tareq1988/facebook-account-kit"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -126,4 +148,8 @@ msgstr ""
 
 #. Author of the plugin/theme
 msgid "Tareq Hasan"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://tareq.co/"
 msgstr ""

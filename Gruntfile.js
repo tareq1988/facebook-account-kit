@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                 options: {
                     exclude: ['build/.*', 'node_modules/*', 'assets/*'],
                     domainPath: '/languages/', // Where to save the POT file.
-                    potFilename: 'facebook-account-kit.pot', // Name of the POT file.
+                    potFilename: 'fb-account-kit.pot', // Name of the POT file.
                     type: 'wp-plugin', // Type of project (wp-plugin or wp-theme).
                     potHeaders: {
                         'report-msgid-bugs-to': 'https://example.com',
@@ -108,12 +108,12 @@ module.exports = function(grunt) {
             main: {
                 options: {
                     mode: 'zip',
-                    archive: './build/facebook-account-kit-v<%= pkg.version %>.zip'
+                    archive: './build/fb-account-kit-v<%= pkg.version %>.zip'
                 },
                 expand: true,
                 cwd: 'build/',
                 src: ['**/*'],
-                dest: 'facebook-account-kit'
+                dest: 'fb-account-kit'
             }
         },
 

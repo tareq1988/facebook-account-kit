@@ -3,8 +3,8 @@ Contributors: tareq1988
 Donate link: https://tareq.co/donate/
 Tags: facebook, login, registration, account-kit, account, social
 Requires at least: 4.0
-Tested up to: 4.9.4
-Stable tag: 1.0
+Tested up to: 4.9.8
+Stable tag: 1.1
 Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -14,6 +14,14 @@ Facebook Account Kit integration for WordPress. Quickly register for apps using 
 == Description ==
 
 Facebook Account Kit integration for WordPress. Quickly register for apps using just your phone number or email address – no password needed.
+
+= Features =
+
+ * Login with SMS (phone)
+ * Login with Email
+
+= Installation Video =
+[youtube https://www.youtube.com/watch?v=WozaMIwgRlo]
 
 == Installation ==
 
@@ -64,6 +72,13 @@ Facebook account and the account kit authentication is fully separated and there
 
 == Changelog ==
 
+= 1.1 - September 10, 2018 =
+
+ * **New:** Associate an existing account with a phone number
+
+= 1.0 - February 07, 2018 =
+
+ * Initial Release
 
 == Upgrade Notice ==
 
