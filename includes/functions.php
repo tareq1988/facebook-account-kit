@@ -55,7 +55,7 @@ function fbak_email_displayed() {
  * @return string
  */
 function fbak_phone_label() {
-    return fbak_get_option( 'phone_label', 'fb_account_kit', __( 'Login with SMS', 'facebook-account-kit' ) );
+    return fbak_get_option( 'phone_label', 'fb_account_kit', __( 'Login with SMS', 'fb-account-kit' ) );
 }
 
 /**
@@ -64,7 +64,7 @@ function fbak_phone_label() {
  * @return string
  */
 function fbak_email_label() {
-    return fbak_get_option( 'email_label', 'fb_account_kit', __( 'Login with Email', 'facebook-account-kit' ) );
+    return fbak_get_option( 'email_label', 'fb_account_kit', __( 'Login with Email', 'fb-account-kit' ) );
 }
 
 /**
@@ -73,7 +73,7 @@ function fbak_email_label() {
  * @return string
  */
 function fbak_description() {
-    return fbak_get_option( 'description', 'fb_account_kit', __( 'Save time by logging-in with your Phone number or Email address, no password is needed.', 'facebook-account-kit' ) );
+    return fbak_get_option( 'description', 'fb_account_kit', __( 'Save time by logging-in with your Phone number or Email address, no password is needed.', 'fb-account-kit' ) );
 }
 
 /**

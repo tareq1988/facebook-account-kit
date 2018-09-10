@@ -5,8 +5,7 @@
             appId: FBAccountKit.app_id,
             state: FBAccountKit.nonce,
             version: FBAccountKit.version,
-            fbAppEventsEnabled: true,
-            redirect: FBAccountKit.redirect
+            fbAppEventsEnabled: true
         });
     };
 
@@ -16,14 +15,12 @@
             var data = {
                 code: response.code,
                 csrf: response.csrf,
-                action: 'fb_account_kit_login'
+                action: 'fb_account_kit_associate'
             };
 
-            $('.fb-ackit-wrap').addClass('loading');
-
             // Send code to server to exchange for access token
-            $.post(FBAccountKit.ajaxurl, data, function(response, textStatus, xhr) {
-                window.location.href = response.data.redirect;
+            $.post(FBAccountKit.ajaxurl, data, function() {
+                window.location.reload();
             });
         }
     }
@@ -33,9 +30,17 @@
         AccountKit.login('PHONE',{},loginCallback);
     }
 
-    // email form submission handler
-    window.emailLogin = function() {
-        AccountKit.login('EMAIL',{},loginCallback);
+    window.fbAcDisconnect = function() {
+
+        if ( confirm( 'Are you sure?' )) {
+            var data = {
+                action: 'fb_account_kit_disconnect'
+            };
+
+            $.post(FBAccountKit.ajaxurl, data, function() {
+                window.location.reload();
+            });
+        }
     }
 
 })(jQuery);

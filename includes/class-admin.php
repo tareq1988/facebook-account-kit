@@ -28,14 +28,14 @@ class Admin {
     }
 
     function admin_menu() {
-        add_options_page( __( 'Account Kit', 'facebook-account-kit' ), __( 'Account Kit', 'facebook-account-kit' ), 'manage_options', 'account-kit', array($this, 'plugin_page') );
+        add_options_page( __( 'Account Kit', 'fb-account-kit' ), __( 'Account Kit', 'fb-account-kit' ), 'manage_options', 'account-kit', array($this, 'plugin_page') );
     }
 
     function get_settings_sections() {
         $sections = array(
             array(
                 'id'    => 'fb_account_kit',
-                'title' => __( 'Account Kit Settings', 'facebook-account-kit' )
+                'title' => __( 'Account Kit Settings', 'fb-account-kit' )
             ),
         );
         return $sections;
@@ -51,19 +51,25 @@ class Admin {
             'fb_account_kit' => array(
                 array(
                     'name'              => 'app_id',
-                    'label'             => __( 'Facebook App ID', 'facebook-account-kit' ),
-                    'desc'              => sprintf( __( 'The app ID of your created Facebook app. <a href="%s" target="_blank">Create a new app</a>.', 'facebook-account-kit' ), 'https://developers.facebook.com/apps/' ),
-                    'placeholder'       => __( 'Facebook App ID', 'facebook-account-kit' ),
+                    'label'             => __( 'Facebook App ID', 'fb-account-kit' ),
+                    'desc'              => sprintf( __( 'The app ID of your created Facebook app. <a href="%s" target="_blank">Create a new app</a>.', 'fb-account-kit' ), 'https://developers.facebook.com/apps/' ),
+                    'placeholder'       => __( 'Facebook App ID', 'fb-account-kit' ),
                     'type'              => 'text',
                     'sanitize_callback' => 'sanitize_text_field'
                 ),
                 array(
                     'name'              => 'app_secret',
-                    'label'             => __( 'Account Kit App Secret', 'facebook-account-kit' ),
-                    'desc'              => __( 'The <strong>Account Kit</strong> app secret. This is different than the Facebook app secret.', 'facebook-account-kit' ),
-                    'placeholder'       => __( 'Account Kit App Secret', 'facebook-account-kit' ),
+                    'label'             => __( 'Account Kit App Secret', 'fb-account-kit' ),
+                    'desc'              => __( 'The <strong>Account Kit</strong> app secret. This is different than the Facebook app secret.', 'fb-account-kit' ),
+                    'placeholder'       => __( 'Account Kit App Secret', 'fb-account-kit' ),
                     'type'              => 'text',
                     'sanitize_callback' => 'sanitize_text_field'
+                ),
+                array(
+                    'name'              => 'redirect_url',
+                    'label'             => __( 'Redirect URL', 'fb-account-kit' ),
+                    'desc'              => '<input type="text" class="regular-text" value="' . home_url( '/?fb_account_kit_redir=true' ) . '" readonly /> <p>' . __( 'Insert as redirect URL inside <strong>Web Login Settings</strong> in the Facebook app settings.', 'fb-account-kit' ) . '</p>',
+                    'type'              => 'html',
                 ),
                 array(
                     'name'    => 'methods',
@@ -72,27 +78,27 @@ class Admin {
                     'type'    => 'multicheck',
                     'default' => array('phone' => 'phone', 'email' => 'email'),
                     'options' => array(
-                        'phone'   => __( 'Login with Phone', 'facebook-account-kit' ),
-                        'email'   => __( 'Login with Email', 'facebook-account-kit' ),
+                        'phone'   => __( 'Login with Phone', 'fb-account-kit' ),
+                        'email'   => __( 'Login with Email', 'fb-account-kit' ),
                     )
                 ),
                 array(
                     'name'              => 'description',
-                    'label'             => __( 'Description', 'facebook-account-kit' ),
+                    'label'             => __( 'Description', 'fb-account-kit' ),
                     'type'              => 'textarea',
-                    'default'           => __( 'Save time by logging-in with your Phone number or Email address, no password is needed.', 'facebook-account-kit' )
+                    'default'           => __( 'Save time by logging-in with your Phone number or Email address, no password is needed.', 'fb-account-kit' )
                 ),
                 array(
                     'name'              => 'phone_label',
-                    'label'             => __( 'Phone Label', 'facebook-account-kit' ),
+                    'label'             => __( 'Phone Label', 'fb-account-kit' ),
                     'type'              => 'text',
-                    'default'           => __( 'Login with SMS', 'facebook-account-kit' ),
+                    'default'           => __( 'Login with SMS', 'fb-account-kit' ),
                     'sanitize_callback' => 'sanitize_text_field'
                 ),
                 array(
                     'name'              => 'email_label',
-                    'label'             => __( 'Email Label', 'facebook-account-kit' ),
-                    'default'           => __( 'Login with Email', 'facebook-account-kit' ),
+                    'label'             => __( 'Email Label', 'fb-account-kit' ),
+                    'default'           => __( 'Login with Email', 'fb-account-kit' ),
                     'type'              => 'text',
                     'sanitize_callback' => 'sanitize_text_field'
                 ),
@@ -120,7 +126,7 @@ class Admin {
      */
     function plugin_action_links( $links ) {
 
-        $links[] = '<a href="' . admin_url( 'options-general.php?page=account-kit' ) . '">' . __( 'Settings', 'facebook-account-kit' ) . '</a>';
+        $links[] = '<a href="' . admin_url( 'options-general.php?page=account-kit' ) . '">' . __( 'Settings', 'fb-account-kit' ) . '</a>';
 
         return $links;
     }

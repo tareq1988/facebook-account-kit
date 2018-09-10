@@ -15,11 +15,11 @@
     </div>
 
     <div class="fb-ackit-or">
-        <span><?php _e( 'Or', 'facebook-account-kit' ); ?></span>
+        <span><?php _e( 'Or', 'fb-account-kit' ); ?></span>
     </div>
 
     <div class="fb-ackit-toggle">
-        <a href="#" class="default"><?php _e( 'Login with Username and Password', 'facebook-account-kit' ); ?></a>
-        <a href="#" class="ackit"><?php _e( 'Login with SMS or Email', 'facebook-account-kit' ); ?></a>
+        <a href="#" class="default"><?php _e( 'Login with Username and Password', 'fb-account-kit' ); ?></a>
+        <a href="#" class="ackit"><?php _e( 'Login with SMS or Email', 'fb-account-kit' ); ?></a>
     </div>
 </div>

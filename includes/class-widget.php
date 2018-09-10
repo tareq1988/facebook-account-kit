@@ -9,8 +9,8 @@ class Widget extends \WP_Widget {
     public function __construct() {
         parent::__construct(
             'fb-account-kit', // Base ID
-            esc_html__( 'Facebook Account Kit', 'facebook-account-kit' ), // Name
-            array( 'description' => esc_html__( 'Facebook Account Kit login widget.', 'facebook-account-kit' ), ) // Args
+            esc_html__( 'Facebook Account Kit', 'fb-account-kit' ), // Name
+            array( 'description' => esc_html__( 'Facebook Account Kit login widget.', 'fb-account-kit' ), ) // Args
         );
     }
 
@@ -65,13 +65,13 @@ class Widget extends \WP_Widget {
      */
     public function form( $instance ) {
         $instance = wp_parse_args( (array) $instance, array(
-            'title' => __( 'Account Login', 'facebook-account-kit' ),
+            'title' => __( 'Account Login', 'fb-account-kit' ),
         ) );
 
         $title = sanitize_text_field( $instance['title'] );
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'facebook-account-kit' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'fb-account-kit' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
         <?php
@@ -88,7 +88,7 @@ class Widget extends \WP_Widget {
     public function update( $new_instance, $old_instance ) {
         $instance     = $old_instance;
         $new_instance = wp_parse_args( (array) $new_instance, array(
-            'title' => __( 'Account Login', 'facebook-account-kit' ),
+            'title' => __( 'Account Login', 'fb-account-kit' ),
         ) );
 
         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';

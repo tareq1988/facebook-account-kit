@@ -3,12 +3,12 @@
 Plugin Name: Facebook Account Kit
 Plugin URI: https://github.com/tareq1988/facebook-account-kit
 Description: Facebook Account Kit integration for WordPress
-Version: 1.0
+Version: 1.1
 Author: Tareq Hasan
 Author URI: https://tareq.co/
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: facebook-account-kit
+Text Domain: fb-account-kit
 Domain Path: /languages
 */
 
@@ -144,6 +144,7 @@ class FB_Account_Kit {
         if ( is_admin() ) {
             require_once FB_ACCOUNT_KIT_INCLUDES . '/lib/class-settings-api.php';
             require_once FB_ACCOUNT_KIT_INCLUDES . '/class-admin.php';
+            require_once FB_ACCOUNT_KIT_INCLUDES . '/class-profile.php';
         }
 
         require_once FB_ACCOUNT_KIT_INCLUDES . '/functions.php';
@@ -164,6 +165,7 @@ class FB_Account_Kit {
 
         // Loads frontend scripts and styles
         add_action( 'wp_enqueue_scripts', array( $this, 'register_script' ) );
+        add_action( 'admin_enqueue_scripts', array( $this, 'register_script' ) );
         add_action( 'login_enqueue_scripts', array( $this, 'register_script' ) );
     }
 
@@ -182,6 +184,7 @@ class FB_Account_Kit {
 
         if ( is_admin() ) {
             new \WeDevs\FBAccountKit\Admin();
+            new \WeDevs\FBAccountKit\Profile();
         }
     }
 
@@ -200,7 +203,7 @@ class FB_Account_Kit {
      * @uses load_plugin_textdomain()
      */
     public function localization_setup() {
-        load_plugin_textdomain( 'facebook-account-kit', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+        load_plugin_textdomain( 'fb-account-kit', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
     }
 
     /**

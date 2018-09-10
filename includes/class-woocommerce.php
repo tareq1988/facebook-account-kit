@@ -20,7 +20,7 @@ class WooCommerce {
         <div class="fb-ackit-wrap">
 
             <div class="fb-ackit-or">
-                <span><?php _e( 'Or', 'facebook-account-kit' ); ?></span>
+                <span><?php _e( 'Or', 'fb-account-kit' ); ?></span>
             </div>
 
             <div class="fb-ackit-buttons">
